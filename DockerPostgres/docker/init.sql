@@ -11,7 +11,7 @@ CREATE TABLE public.products (
 
 );
 
-CREATE TABLE public.dicount (
+CREATE TABLE public.dicounts (
 	id int  PRIMARY KEY,
 	productId NUMERIC NOT NULL,
 	startDate DATE NOT NULL,
