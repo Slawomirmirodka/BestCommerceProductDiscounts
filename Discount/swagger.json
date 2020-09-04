@@ -1,0 +1,10 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "title" : "Discount",
+    "version" : "1.0.0",
+    "description" : "Discount"
+  },
+  "paths" : { },
+  "basePath" : "/discount/v1"
+}

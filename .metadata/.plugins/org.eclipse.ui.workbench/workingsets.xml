@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="com.ibm.etools.mft.navigator.BrokerWorkingSet.AppLib" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1599223785809_1" label="[Discount]" name="[Discount]">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Discount" type="4"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1599223573793_0" label="Window Working Set" name="Aggregate for window 1599223573793"/>
+</workingSetManager>
