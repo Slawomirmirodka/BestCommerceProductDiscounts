@@ -8,3 +8,35 @@ Discount>>Test>>default>>0>>1599227095524
 2871<<Administration Result<<2020-09-04 15:45:00.147 CEST<<DESKTOP-UOTF97V\SBawek<<deploy<<F:/Repositories/correct/BestCommerceProductDiscounts/GeneratedBarFiles/Discountproject.generated.bar<<BAR<<default<<ExecutionGroup<<COMPLETE
 Discount>>Test>>default>>0>>1599227523103
 2871<<Administration Result<<2020-09-04 15:52:06.141 CEST<<DESKTOP-UOTF97V\SBawek<<deploy<<F:/Repositories/correct/BestCommerceProductDiscounts/GeneratedBarFiles/Discountproject.generated.bar<<BAR<<default<<ExecutionGroup<<COMPLETE
+Discount>>Test>>default>>0>>1599229029623
+2871<<Administration Result<<2020-09-04 16:17:11.376 CEST<<DESKTOP-UOTF97V\SBawek<<deploy<<F:/Repositories/correct/BestCommerceProductDiscounts/GeneratedBarFiles/Discountproject.generated.bar<<BAR<<default<<ExecutionGroup<<COMPLETE
+Discount>>Test>>default>>2>>1599230371961
+2087<<Runtime Response<<2020-09-04 16:39:36.831 CEST<<Test<<ee74d251-72fb-4b64-8eff-3ce9ac3f797b
+4041<<Runtime Response<<2020-09-04 16:39:36.831 CEST<<default<<172ca1b9-80a6-43f1-92f6-a9abb5299a78
+4001<<Runtime Response<<2020-09-04 16:39:36.831 CEST<<postSetDiscount.Set Data
+2420<<Runtime Response<<2020-09-04 16:39:36.831 CEST<<.postSetDiscount_Set_Data.GetDataFormBodyRequest<<21.8<<||
+2871<<Administration Result<<2020-09-04 16:39:36.831 CEST<<DESKTOP-UOTF97V\SBawek<<deploy<<F:/Repositories/correct/BestCommerceProductDiscounts/GeneratedBarFiles/Discountproject.generated.bar<<BAR<<default<<ExecutionGroup<<FAILED
+Discount>>Test>>default>>0>>1599230419760
+2871<<Administration Result<<2020-09-04 16:40:22.931 CEST<<DESKTOP-UOTF97V\SBawek<<deploy<<F:/Repositories/correct/BestCommerceProductDiscounts/GeneratedBarFiles/Discountproject.generated.bar<<BAR<<default<<ExecutionGroup<<COMPLETE
+Discount>>Test>>default>>0>>1599231574058
+2871<<Administration Result<<2020-09-04 16:59:39.007 CEST<<DESKTOP-UOTF97V\SBawek<<deploy<<F:/Repositories/correct/BestCommerceProductDiscounts/GeneratedBarFiles/Discountproject.generated.bar<<BAR<<default<<ExecutionGroup<<COMPLETE
+Discount>>Test>>default>>2>>1599231799839
+2087<<Runtime Response<<2020-09-04 17:03:25.212 CEST<<Test<<ee74d251-72fb-4b64-8eff-3ce9ac3f797b
+4041<<Runtime Response<<2020-09-04 17:03:25.212 CEST<<default<<172ca1b9-80a6-43f1-92f6-a9abb5299a78
+4001<<Runtime Response<<2020-09-04 17:03:25.212 CEST<<postSetDiscount.Set Data
+2420<<Runtime Response<<2020-09-04 17:03:25.212 CEST<<.postSetDiscount_Set_Data.GetDataFormBodyRequest<<20.8<<||
+2871<<Administration Result<<2020-09-04 17:03:25.212 CEST<<DESKTOP-UOTF97V\SBawek<<deploy<<F:/Repositories/correct/BestCommerceProductDiscounts/GeneratedBarFiles/Discountproject.generated.bar<<BAR<<default<<ExecutionGroup<<FAILED
+Discount>>Test>>default>>2>>1599231908812
+2087<<Runtime Response<<2020-09-04 17:05:11.401 CEST<<Test<<ee74d251-72fb-4b64-8eff-3ce9ac3f797b
+4041<<Runtime Response<<2020-09-04 17:05:11.401 CEST<<default<<172ca1b9-80a6-43f1-92f6-a9abb5299a78
+4001<<Runtime Response<<2020-09-04 17:05:11.401 CEST<<postSetDiscount.Set Data
+2420<<Runtime Response<<2020-09-04 17:05:11.401 CEST<<.postSetDiscount_Set_Data.GetDataFormBodyRequest<<17.8<<||
+2871<<Administration Result<<2020-09-04 17:05:11.401 CEST<<DESKTOP-UOTF97V\SBawek<<deploy<<F:/Repositories/correct/BestCommerceProductDiscounts/GeneratedBarFiles/Discountproject.generated.bar<<BAR<<default<<ExecutionGroup<<FAILED
+Discount>>Test>>default>>2>>1599231974178
+2087<<Runtime Response<<2020-09-04 17:06:17.590 CEST<<Test<<ee74d251-72fb-4b64-8eff-3ce9ac3f797b
+4041<<Runtime Response<<2020-09-04 17:06:17.590 CEST<<default<<172ca1b9-80a6-43f1-92f6-a9abb5299a78
+4001<<Runtime Response<<2020-09-04 17:06:17.590 CEST<<postSetDiscount.Set Data
+2420<<Runtime Response<<2020-09-04 17:06:17.590 CEST<<.postSetDiscount_Set_Data.GetDataFormBodyRequest<<15.8<<||
+2871<<Administration Result<<2020-09-04 17:06:17.590 CEST<<DESKTOP-UOTF97V\SBawek<<deploy<<F:/Repositories/correct/BestCommerceProductDiscounts/GeneratedBarFiles/Discountproject.generated.bar<<BAR<<default<<ExecutionGroup<<FAILED
+Discount>>Test>>default>>0>>1599232102854
+2871<<Administration Result<<2020-09-04 17:08:28.709 CEST<<DESKTOP-UOTF97V\SBawek<<deploy<<F:/Repositories/correct/BestCommerceProductDiscounts/GeneratedBarFiles/Discountproject.generated.bar<<BAR<<default<<ExecutionGroup<<COMPLETE

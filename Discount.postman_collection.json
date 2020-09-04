@@ -1,0 +1,44 @@
+{
+	"info": {
+		"_postman_id": "17e9e07d-7055-4839-a7b9-a1baa2ad761a",
+		"name": "Discount",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "discountSave",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"productId\": 7,\r\n     \"startDate\": \"2020-09-01\",\r\n     \"endDate\": \"2020-09-05\",\r\n     \"percent\": 15\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7800/discount/v1/setDiscount/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7800",
+					"path": [
+						"discount",
+						"v1",
+						"setDiscount",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

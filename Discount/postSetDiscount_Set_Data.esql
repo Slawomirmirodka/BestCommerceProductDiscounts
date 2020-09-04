@@ -19,15 +19,33 @@ CREATE COMPUTE MODULE postSetDiscount_Set_Data
 	END;
 
 	CREATE PROCEDURE GetDataFormBodyRequest() BEGIN
-		DECLARE ProductId INTEGER;
-		DECLARE StartDate DATE;
-		DECLARE EndDate DATE;
-		DECLARE Percent INTEGER;
+		DECLARE ProductId CHARACTER;
+		DECLARE StartDate CHARACTER;
+		DECLARE EndDate CHARACTER;
+		DECLARE Percent CHARACTER;
 		
-		SET ProductId = InputRoot.JSON.Data.productId;
-		SET StartDate = CAST(InputRoot.JSON.Data.startDate AS DATE);
-		SET EndDate = CAST(InputRoot.JSON.Data.endDate AS DATE);
-		SET Percent = InputRoot.JSON.Data.percent;		
+		SET ProductId = CAST(InputRoot.JSON.Data.productId AS CHARACTER);
+		SET StartDate = CAST(InputRoot.JSON.Data.startDate AS CHARACTER);
+		SET EndDate = CAST(InputRoot.JSON.Data.endDate AS CHARACTER);
+		SET Percent = CAST(InputRoot.JSON.Data.percent AS CHARACTER);
+		
+		DECLARE SQLQuerry CHARACTER;
+		
+		SET SQLQuerry = 'INSERT INTO public.dicounts(productid, startdate, enddate, percent) VALUES ( '
+							|| ProductId
+							|| ', '
+							|| StartDate
+							|| ', '
+							|| EndDate
+							|| ','
+							|| Percent
+							|| ';';
+		
+		
+		SET Environment.Variables.RESPONSE = PASSTHRU(SQLQuerry);
+		
+		DECLARE RESPONSE CHARACTER;
+							
 		
 	END;
 END MODULE;
