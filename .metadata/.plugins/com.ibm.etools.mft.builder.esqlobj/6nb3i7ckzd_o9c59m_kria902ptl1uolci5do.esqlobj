@@ -1,0 +1,45 @@
+CREATE COMPUTE MODULE getGetProduct_SearchDiscount
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		 CALL CopyMessageHeaders();
+		 CALL GetDiscount();
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE GetDiscount() BEGIN
+		DECLARE product REFERENCE TO Environment.Variables.DBDATA;
+		DECLARE today DATE CURRENT_DATE;
+		
+		DECLARE SQLQuery CHARACTER;
+		SET SQLQuery = 'SELECT percent FROM public.dicounts WHERE productid = '
+						|| CAST(product.id AS CHARACTER)
+						|| ' AND startdate <= '
+						|| '''' || CAST(today AS CHARACTER FORMAT 'yyyy-MM-dd')  || ''''
+						|| ' AND enddate >= '
+						|| '''' || CAST(today AS CHARACTER FORMAT 'yyyy-MM-dd') || ''''
+						|| ';';
+		SET Environment.Variables.SQLQUERY2 = SQLQuery;
+		
+		SET Environment.Variables.DISCOUNT = PASSTHRU(SQLQuery);
+		IF Environment.Variables.DISCOUNT.percent IS NOT NULL THEN 
+			DECLARE Discount DECIMAL;
+			SET Discount = CAST(Environment.Variables.DISCOUNT.percent AS DECIMAL); 
+			SET product.unitprice = CAST(product.unitprice AS DECIMAL) * (1- Discount / 100);
+			SET product.unitprice = ROUND(product.unitprice,2)
+		END IF;
+			
+		SET OutputRoot.JSON.Data.product = product;
+		
+		DECLARE a CHARACTER;
+	END;
+END MODULE;

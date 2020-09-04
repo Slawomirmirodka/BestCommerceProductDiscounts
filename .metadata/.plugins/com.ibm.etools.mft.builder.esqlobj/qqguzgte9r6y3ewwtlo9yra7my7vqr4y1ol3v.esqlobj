@@ -1,0 +1,48 @@
+CREATE COMPUTE MODULE getGetProduct_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		CALL CopyMessageHeaders();
+		 CALL GetProductWithDiscount();
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE GetProductWithDiscount() BEGIN
+		DECLARE ProductId CHARACTER;
+		SET ProductId = CAST(InputLocalEnvironment.REST.Input.Parameters.productId AS CHARACTER);
+		
+		IF ProductId IS NULL THEN
+			THROW EXCEPTION VALUES ('Null productId value.');
+		END IF;
+		
+		DECLARE SQLQuery CHARACTER;
+		
+		SET SQLQuery = 'SELECT id, category, name, description, unitprice, inventory, paymentoption, deliverymethod
+						FROM public.products WHERE id = '
+						|| ProductId
+						|| ';';
+		SET Environment.Variables.SQLQUERY = SQLQuery;
+		SET Environment.Variables.DBDATA = PASSTHRU(SQLQuery);
+		
+		SET OutputRoot.JSON.Data.Item.id = Environment.Variables.DBDATA.id;
+		SET OutputRoot.JSON.Data.Item.category = Environment.Variables.DBDATA.category;
+		SET OutputRoot.JSON.Data.Item.name = Environment.Variables.DBDATA.name;
+		SET OutputRoot.JSON.Data.Item.description = Environment.Variables.DBDATA.description;
+		SET OutputRoot.JSON.Data.Item.unitprice = Environment.Variables.DBDATA.unitprice;
+		SET OutputRoot.JSON.Data.Item.inventory = Environment.Variables.DBDATA.inventory;
+		SET OutputRoot.JSON.Data.Item.paymentoption = Environment.Variables.DBDATA.paymentoption;
+		SET OutputRoot.JSON.Data.Item.deliverymethod = Environment.Variables.DBDATA.deliverymethod;
+			
+		
+		
+	END;
+END MODULE;

@@ -2,6 +2,9 @@
 <stringAttribute key="BRName" value="Test"/>
 <stringAttribute key="ConnectionInfo" value=""/>
 <stringAttribute key="EGName" value="default"/>
+<stringAttribute key="com.ibm.debug.wsa.attr_vm_name" value="IBM J9 VM"/>
+<stringAttribute key="com.ibm.debug.wsa.attr_vm_version" value="1.8.0_151"/>
+<intAttribute key="com.ibm.debug.wsa.attr_was_version" value="61"/>
 <stringAttribute key="com.ibm.etools.mft.debug.attr_hostname" value="DESKTOP-UOTF97V"/>
 <stringAttribute key="com.ibm.etools.mft.debug.attr_javaportname" value="7801"/>
 </launchConfiguration>

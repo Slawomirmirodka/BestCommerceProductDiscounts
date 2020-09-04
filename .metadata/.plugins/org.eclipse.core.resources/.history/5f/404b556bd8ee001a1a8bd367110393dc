@@ -1,0 +1,39 @@
+
+
+CREATE COMPUTE MODULE getGetProduct_SearchDiscount
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		 CALL CopyMessageHeaders();
+		 CALL GetDiscount();
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE GetDiscount() BEGIN
+		DECLARE product REFERENCE TO Environment.Variables.DBDATA;
+		DECLARE today DATE CURRENT_DATE;
+		
+		DECLARE SQLQuery CHARACTER;
+		SET SQLQuery = 'SELECT percent FROM public.dicounts WHERE productid = '
+						|| CAST(product.id AS CHARACTER)
+						|| 'AND startdate <= '
+						|| '''' || CAST(today AS CHARACTER) || ''''
+						|| 'AND enddate >= '
+						|| '''' || CAST(today AS CHARACTER) || '''';
+		SET Environment.Variables.SQLQUERY2 = SQLQuery;
+		
+		SET Environment.Variables.DISCOUNT = PASSTHRU(SQLQuery);
+		
+		
+		DECLARE a CHARACTER;
+	END;
+END MODULE;
