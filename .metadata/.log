@@ -50,3 +50,9 @@ Command-line arguments:  -data F:\Repositories\correct\BestCommerceProductDiscou
 
 !ENTRY org.eclipse.osgi 2 1 2020-09-04 14:49:47.668
 !MESSAGE NLS unused message: DFDLXSDResourceBuilder_errorProjectReferenceIsMissing in: com.ibm.etools.msg.builder.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-09-04 15:24:23.922
+!MESSAGE NLS unused message: SendMessage_msgNameLabel in: com.ibm.etools.mft.testmode.TestModeStrings
+
+!ENTRY org.eclipse.osgi 2 1 2020-09-04 15:24:23.922
+!MESSAGE NLS missing message: SendLastMessageAction_label in: com.ibm.etools.mft.testmode.TestModeStrings

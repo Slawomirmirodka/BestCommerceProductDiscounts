@@ -12,11 +12,11 @@ CREATE TABLE public.products (
 );
 
 CREATE TABLE public.dicounts (
-	id int  PRIMARY KEY,
+	id SERIAL  PRIMARY KEY,
 	productId NUMERIC NOT NULL,
 	startDate DATE NOT NULL,
 	endDate DATE NOT NULL,
-	percent INTEGER  NOT NULL,
+	percent INTEGER  NOT NULL
 );
 
 INSERT INTO products (id, category, name, description, unitPrice, inventory, paymentOption, deliveryMethod)

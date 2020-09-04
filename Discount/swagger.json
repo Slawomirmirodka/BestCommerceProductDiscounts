@@ -5,6 +5,77 @@
     "version" : "1.0.0",
     "description" : "Discount"
   },
-  "paths" : { },
-  "basePath" : "/discount/v1"
+  "paths" : {
+    "/setDiscount" : {
+      "post" : {
+        "operationId" : "postSetDiscount",
+        "responses" : {
+          "200" : {
+            "description" : "The operation was successful."
+          }
+        },
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "description" : "Insert a setDiscount",
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "schema" : {
+            "type" : "string"
+          },
+          "description" : "The request body for the operation",
+          "required" : true
+        } ]
+      }
+    }
+  },
+  "basePath" : "/discount/v1",
+  "definitions" : {
+    "discountProduct" : {
+      "type" : "object",
+      "properties" : {
+        "productId" : {
+          "type" : "integer"
+        },
+        "startDate" : {
+          "type" : "string"
+        },
+        "endDate" : {
+          "type" : "string"
+        },
+        "percent" : {
+          "type" : "number"
+        }
+      }
+    },
+    "product" : {
+      "type" : "object",
+      "properties" : {
+        "id" : {
+          "type" : "integer"
+        },
+        "category" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "description" : {
+          "type" : "string"
+        },
+        "unitprice" : {
+          "type" : "number"
+        },
+        "inventory" : {
+          "type" : "integer"
+        },
+        "paymentoption" : {
+          "type" : "string"
+        },
+        "deliverymethod" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
 }
