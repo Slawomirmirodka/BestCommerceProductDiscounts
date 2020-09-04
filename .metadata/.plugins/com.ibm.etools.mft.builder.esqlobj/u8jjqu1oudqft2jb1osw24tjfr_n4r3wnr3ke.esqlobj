@@ -1,5 +1,3 @@
-
-
 CREATE COMPUTE MODULE postSetDiscount_Set_Data
 	CREATE FUNCTION Main() RETURNS BOOLEAN
 	BEGIN
@@ -46,9 +44,6 @@ CREATE COMPUTE MODULE postSetDiscount_Set_Data
 		IF Environment.Variables.RESPONSE IS NULL THEN
 			SET OutputRoot.JSON.Data.response.status = 'Success';
 			SET OutputRoot.JSON.Data.response.code = '200';
-		ELSE 
-			SET OutputRoot.JSON.Data.response.status = 'Bad Request';
-			SET OutputRoot.JSON.Data.response.code = '400';
 		END IF;
 		
 	END;

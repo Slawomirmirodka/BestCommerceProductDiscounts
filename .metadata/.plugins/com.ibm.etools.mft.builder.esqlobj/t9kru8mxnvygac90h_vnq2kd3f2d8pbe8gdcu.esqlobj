@@ -1,5 +1,3 @@
-
-
 CREATE COMPUTE MODULE postSetDiscount_Set_Data
 	CREATE FUNCTION Main() RETURNS BOOLEAN
 	BEGIN
@@ -44,12 +42,10 @@ CREATE COMPUTE MODULE postSetDiscount_Set_Data
 		
 		SET Environment.Variables.RESPONSE = PASSTHRU(SQLQuerry);
 		IF Environment.Variables.RESPONSE IS NULL THEN
-			SET OutputRoot.JSON.Data.response.status = 'Success';
-			SET OutputRoot.JSON.Data.response.code = '200';
-		ELSE 
-			SET OutputRoot.JSON.Data.response.status = 'Bad Request';
-			SET OutputRoot.JSON.Data.response.code = '400';
+			SET OutputRoot.XMLNSC.response = 'Success';
 		END IF;
+		DECLARE RESPONSE CHARACTER;
+							
 		
 	END;
 END MODULE;

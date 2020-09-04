@@ -56,3 +56,155 @@ Command-line arguments:  -data F:\Repositories\correct\BestCommerceProductDiscou
 
 !ENTRY org.eclipse.osgi 2 1 2020-09-04 15:24:23.922
 !MESSAGE NLS missing message: SendLastMessageAction_label in: com.ibm.etools.mft.testmode.TestModeStrings
+
+!ENTRY org.eclipse.jface 2 0 2020-09-04 17:46:58.557
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-09-04 17:46:58.557
+!MESSAGE A conflict occurred for CTRL+R:
+Binding(CTRL+R,
+	ParameterizedCommand(Command(com.ibm.msl.mapping.ui.QuickLinkToOutputCommand,Quick Link to Output,
+		,
+		Category(com.ibm.msl.mapping.ui.mapEditingCategory,Mapping,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@11a6ecdf,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	com.ibm.msl.mapping.ui.mapEditing,,,system)
+Binding(CTRL+R,
+	ParameterizedCommand(Command(org.eclipse.debug.ui.commands.RunToLine,Run to Line,
+		Resume and break when execution reaches the current line,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.MakeHandlersGo@a7d3b568,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.debugging,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-09-04 17:46:58.557
+!MESSAGE A conflict occurred for F5:
+Binding(F5,
+	ParameterizedCommand(Command(com.ibm.msl.mapping.ui.refreshViewCommand,Refresh,
+		,
+		Category(com.ibm.msl.mapping.ui.mapEditingCategory,Mapping,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@77f630f6,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	com.ibm.msl.mapping.ui.mapEditing,,,system)
+Binding(F5,
+	ParameterizedCommand(Command(org.eclipse.debug.ui.commands.StepInto,Step Into,
+		Step into,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.MakeHandlersGo@6faae7d1,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.debugging,,,system)
+Binding(F5,
+	ParameterizedCommand(Command(org.eclipse.ui.file.refresh,Refresh,
+		Refresh the selected items,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@9bbf4884,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.ui 4 4 2020-09-04 17:46:58.561
+!MESSAGE Conflicting handlers for com.ibm.msl.mapping.ui.QuickLinkFromInputCommand: {com.ibm.msl.mapping.internal.ui.editor.MappingEditor$10@14587ed7} vs {com.ibm.msl.mapping.internal.ui.editor.MappingEditor$10@8dfe0c29}
+
+!ENTRY org.eclipse.ui 4 4 2020-09-04 17:46:58.561
+!MESSAGE Conflicting handlers for com.ibm.msl.mapping.ui.QuickLinkToOutputCommand: {com.ibm.msl.mapping.internal.ui.editor.MappingEditor$10@62e7e211} vs {com.ibm.msl.mapping.internal.ui.editor.MappingEditor$10@229d9399}
+
+!ENTRY org.eclipse.ui 4 4 2020-09-04 17:56:22.154
+!MESSAGE Conflicting handlers for com.ibm.msl.mapping.ui.QuickLinkFromInputCommand: {com.ibm.msl.mapping.internal.ui.editor.MappingEditor$10@6b79b029} vs {com.ibm.msl.mapping.internal.ui.editor.MappingEditor$10@d7966f85}
+
+!ENTRY org.eclipse.ui 4 4 2020-09-04 17:56:22.155
+!MESSAGE Conflicting handlers for com.ibm.msl.mapping.ui.QuickLinkToOutputCommand: {com.ibm.msl.mapping.internal.ui.editor.MappingEditor$10@876f54ce} vs {com.ibm.msl.mapping.internal.ui.editor.MappingEditor$10@d0b88fee}
+
+!ENTRY org.eclipse.jface 2 0 2020-09-04 17:56:24.077
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-09-04 17:56:24.077
+!MESSAGE A conflict occurred for CTRL+J:
+Binding(CTRL+J,
+	ParameterizedCommand(Command(com.ibm.msl.mapping.ui.mapCommand,Map,
+		,
+		Category(com.ibm.msl.mapping.ui.mapEditingCategory,Mapping,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@4c108a3e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	com.ibm.msl.mapping.ui.mapEditing,,,system)
+Binding(CTRL+J,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.findIncremental,Incremental Find,
+		Incremental find,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@b489b2cc,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-09-04 17:56:24.077
+!MESSAGE A conflict occurred for CTRL+SHIFT+X:
+Binding(CTRL+SHIFT+X,
+	ParameterizedCommand(Command(com.ibm.msl.mapping.xml.ui.associateXMLCommand,Associate XML,
+		,
+		Category(com.ibm.msl.mapping.ui.mapEditingCategory,Mapping,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@d4dbb7d5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	com.ibm.msl.mapping.ui.mapEditing,,,system)
+Binding(CTRL+SHIFT+X,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.text.upperCase,To Upper Case,
+		Changes the selection to upper case,
+		Category(org.eclipse.ui.category.textEditor,Text Editing,Text Editing Commands,true),
+		org.eclipse.ui.internal.MakeHandlersGo@8e29a2ab,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-09-04 17:56:24.077
+!MESSAGE A conflict occurred for CTRL+L:
+Binding(CTRL+L,
+	ParameterizedCommand(Command(com.ibm.msl.mapping.ui.QuickLinkFromInputCommand,Quick Link from Input,
+		,
+		Category(com.ibm.msl.mapping.ui.mapEditingCategory,Mapping,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@23f5f46a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	com.ibm.msl.mapping.ui.mapEditing,,,system)
+Binding(CTRL+L,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.text.goto.line,Go to Line,
+		Go to a specified line of text,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@cba8b289,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-09-04 17:56:24.077
+!MESSAGE A conflict occurred for CTRL+ARROW_DOWN:
+Binding(CTRL+ARROW_DOWN,
+	ParameterizedCommand(Command(com.ibm.msl.mapping.xml.ui.moveCastDownCommand,Move down,
+		,
+		Category(com.ibm.msl.mapping.ui.mapEditingCategory,Mapping,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@41936e1,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	com.ibm.msl.mapping.ui.mapEditing,,,system)
+Binding(CTRL+ARROW_DOWN,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.text.scroll.lineDown,Scroll Line Down,
+		Scroll down one line of text,
+		Category(org.eclipse.ui.category.textEditor,Text Editing,Text Editing Commands,true),
+		org.eclipse.ui.internal.MakeHandlersGo@9f1f523c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-09-04 17:56:24.077
+!MESSAGE A conflict occurred for CTRL+ARROW_UP:
+Binding(CTRL+ARROW_UP,
+	ParameterizedCommand(Command(com.ibm.msl.mapping.xml.ui.moveCastUpCommand,Move up,
+		,
+		Category(com.ibm.msl.mapping.ui.mapEditingCategory,Mapping,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@9e44136a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	com.ibm.msl.mapping.ui.mapEditing,,,system)
+Binding(CTRL+ARROW_UP,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.text.scroll.lineUp,Scroll Line Up,
+		Scroll up one line of text,
+		Category(org.eclipse.ui.category.textEditor,Text Editing,Text Editing Commands,true),
+		org.eclipse.ui.internal.MakeHandlersGo@1555172c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)

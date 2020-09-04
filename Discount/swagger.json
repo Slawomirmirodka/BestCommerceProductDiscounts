@@ -11,7 +11,10 @@
         "operationId" : "postSetDiscount",
         "responses" : {
           "200" : {
-            "description" : "The operation was successful."
+            "description" : "The operation was successful.",
+            "schema" : {
+              "$ref" : "#/definitions/response"
+            }
           }
         },
         "consumes" : [ "application/json" ],
@@ -73,6 +76,17 @@
           "type" : "string"
         },
         "deliverymethod" : {
+          "type" : "string"
+        }
+      }
+    },
+    "response" : {
+      "type" : "object",
+      "properties" : {
+        "status" : {
+          "type" : "string"
+        },
+        "code" : {
           "type" : "string"
         }
       }
