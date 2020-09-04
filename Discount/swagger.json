@@ -30,6 +30,27 @@
           "required" : true
         } ]
       }
+    },
+    "/getProduct" : {
+      "get" : {
+        "operationId" : "getGetProduct",
+        "responses" : {
+          "200" : {
+            "description" : "The operation was successful.",
+            "schema" : {
+              "$ref" : "#/definitions/discountProduct"
+            }
+          }
+        },
+        "produces" : [ "application/json" ],
+        "description" : "Retrieve getProduct",
+        "parameters" : [ {
+          "name" : "productId",
+          "in" : "query",
+          "type" : "number",
+          "required" : true
+        } ]
+      }
     }
   },
   "basePath" : "/discount/v1",
