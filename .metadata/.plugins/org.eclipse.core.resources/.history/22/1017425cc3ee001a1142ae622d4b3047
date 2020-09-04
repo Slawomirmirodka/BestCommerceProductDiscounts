@@ -34,9 +34,9 @@ CREATE COMPUTE MODULE postSetDiscount_Set_Data
 		SET SQLQuerry = 'INSERT INTO public.dicounts(productid, startdate, enddate, percent) VALUES ( '
 							|| ProductId
 							|| ', '
-							|| ''''	|| StartDate || ''''
+							|| StartDate
 							|| ', '
-							|| '''' || EndDate || ''''
+							|| EndDate
 							|| ', '
 							|| Percent
 							|| ');';

@@ -1,7 +1,4 @@
-
-
-CREATE COMPUTE MODULE postSetDiscount_Set_Data
-	CREATE FUNCTION Main() RETURNS BOOLEAN
+/*EATE FUNCTION Main() RETURNS BOOLE*/
 	BEGIN
 		 CALL CopyMessageHeaders();
 		 CALL GetDataFormBodyRequest();
@@ -31,15 +28,16 @@ CREATE COMPUTE MODULE postSetDiscount_Set_Data
 		
 		DECLARE SQLQuerry CHARACTER;
 		
-		SET SQLQuerry = 'INSERT INTO public.dicounts(productid, startdate, enddate, percent) VALUES ( '
+		SET SQLQuerry = 'db.Query(' ||''''||'INSERT INTO public.dicounts(productid, startdate, enddate, percent) VALUES ( '
 							|| ProductId
 							|| ', '
-							|| ''''	|| StartDate || ''''
+							|| StartDate
 							|| ', '
-							|| '''' || EndDate || ''''
-							|| ', '
+							|| EndDate
+							|| ','
 							|| Percent
-							|| ');';
+							|| ';'
+							|| '''';
 		
 		
 		SET Environment.Variables.RESPONSE = PASSTHRU(SQLQuerry);
@@ -48,4 +46,3 @@ CREATE COMPUTE MODULE postSetDiscount_Set_Data
 							
 		
 	END;
-END MODULE;

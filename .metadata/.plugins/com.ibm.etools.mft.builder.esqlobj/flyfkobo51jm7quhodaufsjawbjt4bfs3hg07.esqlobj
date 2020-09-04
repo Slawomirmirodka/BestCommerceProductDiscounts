@@ -1,7 +1,4 @@
-
-
-CREATE COMPUTE MODULE postSetDiscount_Set_Data
-	CREATE FUNCTION Main() RETURNS BOOLEAN
+/*EATE FUNCTION Main() RETURNS BOOLE*/
 	BEGIN
 		 CALL CopyMessageHeaders();
 		 CALL GetDataFormBodyRequest();
@@ -48,4 +45,3 @@ CREATE COMPUTE MODULE postSetDiscount_Set_Data
 							
 		
 	END;
-END MODULE;
